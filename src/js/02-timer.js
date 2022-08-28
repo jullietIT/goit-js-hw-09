@@ -7,15 +7,6 @@ import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
 
-
-
-
-
-
-
-
-
-
 const text = document.querySelector('#datetime-picker');
 const timerHtml = document.querySelector('.timer');
 const btnStart = document.querySelector('button[data-start]');
@@ -43,50 +34,6 @@ if (selectedDates[0] < new Date()) {
 
 // Появился Календарь
 flatpickr(text, options);
-
-
-// //  Обратный отсчет 
-// function getTimeRemaining(endtime) {
-//   var t = Date.parse(endtime) - Date.parse(new Date());
-//   var seconds = Math.floor((t / 1000) % 60);
-//   var minutes = Math.floor((t / 1000 / 60) % 60);
-//   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-//   var days = Math.floor(t / (1000 * 60 * 60 * 24));
-//   return {
-//     'total': t,
-//     'days': days,
-//     'hours': hours,
-//     'minutes': minutes,
-//     'seconds': seconds
-//   };
-// }
- 
-// function initializeClock(id, endtime) {
-//   var clock = document.getElementById(id);
-//   var daysSpan = document.querySelector('.value[data-days]');
-//   var hoursSpan = document.querySelector('.value[data-hours]');
-//   var minutesSpan = document.querySelector('.value[data-minutes]');
-//   var secondsSpan = document.querySelector('.value[data-seconds]');
- 
-//   function updateClock() {
-//     var t = getTimeRemaining(endtime);
- 
-//     daysSpan.innerHTML = t.days;
-//     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-//     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-//     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
- 
-//     if (t.total <= 0) {
-//       clearInterval(timeinterval);
-//     }
-//   }
- 
-//   updateClock();
-//   var timeinterval = setInterval(updateClock, 1000);
-// }
- 
-// var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
-// initializeClock('countdown', deadline);
 
 
 // Для подсчета значений используй готовую функцию convertMs, где ms - разница между конечной и текущей датой в миллисекундах.
@@ -140,15 +87,11 @@ btnStart.addEventListener('click', () => {
 
 
 
-// РЕПЕТА Принимает число , приводит к строке и добавляет  вначало 0 если число имеет меньше 2 х знаков
+// РЕПЕТА: Принимает число , приводит к строке и добавляет  вначало 0 если число имеет меньше 2 х знаков
 
 // function pad(value) {
 //   return String(value).padStart(2, '0');
 // }
-
-
-
-
 
 
 
@@ -191,6 +134,48 @@ btnStart.addEventListener('click', () => {
 
 
 
+// //  Обратный отсчет 
+// function getTimeRemaining(endtime) {
+//   var t = Date.parse(endtime) - Date.parse(new Date());
+//   var seconds = Math.floor((t / 1000) % 60);
+//   var minutes = Math.floor((t / 1000 / 60) % 60);
+//   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+//   var days = Math.floor(t / (1000 * 60 * 60 * 24));
+//   return {
+//     'total': t,
+//     'days': days,
+//     'hours': hours,
+//     'minutes': minutes,
+//     'seconds': seconds
+//   };
+// }
+ 
+// function initializeClock(id, endtime) {
+//   var clock = document.getElementById(id);
+//   var daysSpan = document.querySelector('.value[data-days]');
+//   var hoursSpan = document.querySelector('.value[data-hours]');
+//   var minutesSpan = document.querySelector('.value[data-minutes]');
+//   var secondsSpan = document.querySelector('.value[data-seconds]');
+ 
+//   function updateClock() {
+//     var t = getTimeRemaining(endtime);
+ 
+//     daysSpan.innerHTML = t.days;
+//     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+//     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+//     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+ 
+//     if (t.total <= 0) {
+//       clearInterval(timeinterval);
+//     }
+//   }
+ 
+//   updateClock();
+//   var timeinterval = setInterval(updateClock, 1000);
+// }
+ 
+// var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
+// initializeClock('countdown', deadline);
 
 
 

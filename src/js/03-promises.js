@@ -22,7 +22,7 @@ function createPromise(position, delay) {
   return promise;
 }
 
-
+sss
 // Дополни код функции createPromise так, чтобы она возвращала один промис, который выполянется или отклоняется через delay времени. Значением промиса должен быть объект, в котором будут свойства position и delay со значениями одноименных параметров. Используй начальный код функции для выбора того, что нужно сделать с промисом - выполнить или отклонить.
 btnCreatePromise.addEventListener('click', e => {
   e.preventDefault();
