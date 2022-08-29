@@ -80,7 +80,7 @@ btnStart.addEventListener('click', () => {
       timerHtml.style.color = 'black';
       clearInterval(timer);
     }
-  }, 1000);
+  }, );
 });
 
 
