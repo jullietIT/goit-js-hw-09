@@ -4,6 +4,7 @@ const btnCreatePromise = document.querySelector('button[type="submit"]');
 const step = document.querySelector('input[name="step"]');
 const delay = document.querySelector('input[name="delay"]');
 const amount = document.querySelector('input[name="amount"]');
+const form = document.querySelector('.form');
 
 
 function createPromise(position, delay) {
@@ -22,9 +23,8 @@ function createPromise(position, delay) {
   return promise;
 }
 
-sss
 // Дополни код функции createPromise так, чтобы она возвращала один промис, который выполянется или отклоняется через delay времени. Значением промиса должен быть объект, в котором будут свойства position и delay со значениями одноименных параметров. Используй начальный код функции для выбора того, что нужно сделать с промисом - выполнить или отклонить.
-btnCreatePromise.addEventListener('click', e => {
+form.addEventListener('click', e => {
   e.preventDefault();
   let firstDelay = Number(delay.value);
   let delayStep = Number(step.value);
